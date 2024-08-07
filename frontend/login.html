@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\access\login.css">
+    <link rel="icon" href=".\access\image\111039_key_icon.png" type="image/png">
+    <link rel="stylesheet" href=".\access\font\fontawesome-free-6.5.2\css\all.min.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="box-login">
+        <form active="/login" method="POST" class="form_login">
+            <div class="title">
+                <a id="login-title" href="#">LOGIN</a>
+                <a id="register-title" href="register.html">REGISTER</a>
+            </div>
+            <div class="box-username">
+                <label for="name" id="label-user">Username : </label>
+                <br>
+                <input type="text" name="username" id="name" placeholder="  Enter username here....">
+            </div>
+            <br><br>
+            <div class="box-password">
+                <lable for="pass" id="label-pass">Password : </lable>
+                <br>
+                <input type="password" name="password" id="pass" placeholder="  Enter your password here....">
+            </div>
+        </form>
+        <br>
+        <a href="#" id="text-forgot-password">Forgot password?</a>
+        <br><br>
+        <button type="submit" name="login" id="login-button" value="Login">Login</button>
+        <br><br><br><br>
+        <p class="text-sign-up-with">Or Sign Up Using</p>
+        <i class="fab fa-facebook-f social-icon" id="fb-icon"></i>
+        <i class="fab fa-google social-icon" id="gg-icon"></i>
+        <i class="fab fa-twitter social-icon" id="tw-icon"></i>
+    </div>
+
+    </form>
+</body>
+<script src=".\access\login.js"></script>
+</html>

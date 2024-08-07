@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\access\register.css">
+    <link rel="icon" href=".\access\image\images.png" type="image/png">
+    <link rel="stylesheet" href=".\access\font\fontawesome-free-6.5.2\css\all.min.css">
+    <title>Register Page</title>
+</head>
+<body>
+    <div class="box-register">
+        <form active="/register" method="POST" class="form_register">
+            <div class="title">
+                <a id="login-title" href="login.html">LOGIN</a>
+                <a id="register-title" href="#">REGISTER</a>
+            </div>
+            <div class="box-username">
+                <label for="name" id="label-user">Username : </label>
+                <br>
+                <input type="text" name="username" id="name" placeholder="  Enter username here...." pattern="[[1-9a-zA-Z{7,30}]" required>
+            </div>
+            <br><br>
+            <div class="box-password">
+                <lable for="pass" id="label-pass">Password : </lable>
+                <br>
+                <input type="password" name="password" id="pass" placeholder="  Enter your password here...." pattern="[[1-9a-zA-Z!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]{10,30}]" required>
+            </div>
+            <br><br>
+            <div class="box-confirm-password">
+                <label for="confirm" id="label-confirm">Confirm Password : </label>
+                <br>
+                <input type="password" id="confirm" name="confirm-password" placeholder="  Confirm password here......" pattern="[[1-9a-zA-Z!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]{10,30}]">
+            </div>
+        </form>
+        <button type="submit" name="register" id="register-button" value="Login">Register</button>
+    </div>
+</body>
+<script src=".\access\register.js"></script>
+</html>

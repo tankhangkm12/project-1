@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href=".\access\font\fontawesome-free-6.5.2\css\all.min.css">
+    <link rel="stylesheet" href=".\access\home.css">
+    <link rel="stylesheet" href=".\access\base.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <b class="title">HỆ THỐNG QUẢN LÝ HỌC SINH - SINH VIÊN QUẢNG NGÃI</b>
+        </div>
+        <div class="menu">
+            <div class="menu-avatar">
+                <img src=".\access\image\asuna.jpg" alt="ảnh đại diện" title=" ảnh đại diện" class="menu-avatar-image">
+                <div class="menu-greeting">
+                    <p class="menu-greeting-text">Xin chào</p>
+                    <p id="username">Username</p>
+                </div>
+            </div>
+
+            <b class="menu-text-management">QUẢN LÝ CHỨC NĂNG</b>
+            <ul class="menu-management">
+                <li class="menu-item menu-item-student" data-target="main-students">
+                    <i class="fa-solid fa-angles-right menu-arrow"></i>
+                    <p class="menu-student-text">HỌC SINH</p>
+                </li>
+                <li class="menu-item" data-target="main-class-list">
+                    <i class="fa-solid fa-angles-right menu-arrow"></i>
+                    <p class="menu-classlist-text">DANH SÁCH LỚP </p>
+                </li>
+                <li class="menu-item" data-target="main-class-management">
+                    <i class="fa-solid fa-angles-right menu-arrow"></i>
+                    <p class="menu-class-text">LỚP</p>
+                </li>
+                <li class="menu-item"  data-target="main-teacher">
+                    <i class="fa-solid fa-angles-right menu-arrow"></i>
+                    <p class="menu-teacher-text">GIÁO VIÊN</p>
+                </li>
+                <li class="menu-item" data-target="main-subject">
+                    <i class="fa-solid fa-angles-right menu-arrow"></i>
+                    <p class="menu-subject-text">MÔN HỌC</p>
+                </li>
+                <li class="menu-item" data-target="main-score">
+                    <i class="fa-solid fa-angles-right menu-arrow"></i>
+                    <p class="menu-score-text">ĐIỂM</p>
+                </li>
+            </ul>
+            <div class="menu-config">
+                <i class="fa-solid fa-gear setting"></i>
+                <i class="fa-solid fa-right-from-bracket logout"></i>
+            </div>
+        </div>
+        <div id="main-students" class="main">
+            <i class="fa-solid fa-angle-right angle-right"></i>
+            <h1 class="main-title">Danh sách sinh viên</h1>
+            <div class="main-selections">
+                <input autocomplete="off" type="search" name="main-selections-search-student" id="main-search" placeholder=" Tìm kiếm .............">
+            </div>
+            <button class="main-add-student">
+                <i class="fa-solid fa-user-plus add-student"></i>
+                <p class="main-add-student-text">Thêm mới sinh viên</p>
+            </button>
+            <div class="main-student-information">
+                <div class="main-student-information-table">
+                    <table>
+                        <colgroup>
+                            <col class="col-id">
+                            <col class="col-name">
+                            <col class="col-class">
+                            <col class="col-grade">
+                            <col class="col-birthday">
+                            <col class="col-gender">
+                            <col class="col-andress">
+                            <col class="col-year_school">
+                            <col class="col-option-methods">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Mã</th>
+                                <th>Họ Tên</th>
+                                <th>Lớp</th>
+                                <th>Khối</th>
+                                <th>Ngày Sinh</th>
+                                <th>Giới Tính</th>
+                                <th>Địa Chỉ</th>
+                                <th>Niên Khóa</th>
+                                <th title="Chỉnh sửa - Xóa">Tùy Chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentTableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div id="main-class-list" class="main">
+            <i class="fa-solid fa-angle-right angle-right"></i>
+            <h1 class="main-title-class">Danh sách lớp</h1>
+            <div class="main-selections">
+                <input autocomplete="off" type="search" name="main-selections-search-classList" id="main-search-classList" placeholder=" Tìm kiếm lớp.............">
+            </div>
+            <button type="submit" class="main-button-add-class">
+                <i class="fa-solid fa-plus-square add-class-icon"></i>
+                <p class="main-button-add-class-text">Thêm mới lớp</p>
+            </button>
+            <div class="main-class-list-information">
+                <div class="main-class-list-table">
+                    <table>
+                        <colgroup>
+                            <col class="col-name-class">
+                            <col class="col-number-student-class">
+                            <col class="col-teacher-class">
+                            <col class="col-option-class">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Tên Lớp</th>
+                                <th>Số lượng học sinh</th>
+                                <th title="Mã giáo viên - tên giáo viên">Giáo Viên chủ nhiệm</th>
+                                <th title="Chỉnh sửa - Xóa">Tùy Chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody id="classTableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="main-class-management" class="main">
+            <i class="fa-solid fa-angle-right angle-right"></i>
+            <h1 class="main-title-class-management">Lớp</h1>
+            <input type="search" class="search-class" placeholder="Tìm kiếm lớp..... ">
+            <div class="main-class-management-body">
+            </div>
+        </div>
+        <div id="main-teacher" class="main">
+            <i class="fa-solid fa-angle-right angle-right-teacher"></i>
+            <h1 class="main-teacher__title">Danh Sách Giáo Viên</h1>
+            <div class="main-selections">
+                <input autocomplete="off" type="search" name="main-selections-search-teacher" id="main-search-teacher" placeholder=" Tìm kiếm giáo viên.............">
+            </div>
+            <div class="main-teacher-add">
+                <i class="fa-solid fa-plus-square add-teacher"></i>
+                <p class="main-teacher-add-text">Thêm mới giáo viên</p>
+            </div>
+            <div class="main-teacher-information-box">
+                <div class="main-teacher-information-table">
+                    <table>
+                        <colgroup>
+                            <col class="id-teacher">
+                            <col class="name-teacher">
+                            <col class="subject-teacher">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Mã giáo viên</th>
+                                <th>Tên giáo viên</th>
+                                <th>Môn học</th>
+                                <th title="Chỉnh sửa - Xóa">Tùy chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody id="teacherTableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="main-subject" class="main">
+            <i class="fa-solid fa-angle-right angle-right-subject"></i>
+            <h1 class="main-subject__title">Danh Sách Môn Học</h1>
+            <div class="main-selections">
+                <input autocomplete="off" type="search" name="main-selections-search-subject" id="main-search-subject" placeholder=" Tìm kiếm môn học.............">
+            </div>
+            <div class="main-subject-add">
+                <i class="fa-solid fa-plus-square add-subject"></i>
+                <p class="main-subject-add-text">Thêm mới môn học</p>
+            </div>
+            <div class="main-subject-information-box">
+                <div class="main-subject-information-table">
+                    <table>
+                        <colgroup>
+                            <col class="id-subject">
+                            <col class="name-subject">
+                            <col class="teacher-subject">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Mã môn học</th>
+                                <th>Tên môn</th>
+                                <th>Giáo viên phụ trách</th>
+                                <th title="Chỉnh sửa - Xóa">Tùy chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subjectTableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="main-score" class="main">
+            <i class="fa-solid fa-angle-right angle-right-score"></i>
+            <h1 class="main-score__title">Trang chủ điểm sinh viên</h1>
+            <input type="search" class="search-score" placeholder="Enter name/id student or name student here..... ">
+            <button type="submit" class="main-button-add-score">
+                <i class="fa-solid fa-plus-square add-score-icon"></i>
+                <p class="main-button-add-score-text">Thêm mới điểm</p>
+            </button>
+            <div class="main-score-coating">    
+                <div class="box-add-score">
+                    <div class="box-add-score-title">
+                        <p class="box-add-score-title-text">Thêm điểm</p>
+                        <p class="box-add-score-title-exit">X</p>
+                    </div>
+                    <div class="box-add-score-main">
+                        <div class="box-add-score-main-student">
+                            <div class="score-get-id-student-box">
+                                <label for="score-id-student" class="score-id-student-label">Mã học sinh : </label>
+                                <input autocomplete="off" type="text" class="box-add-score-main-id-student" id="score-id-student">
+                            </div>
+                            <div class="score-name-student-box">
+                                <label class="score-name-student-label">Tên học sinh : </label>
+                                <div class="score-name-student"></div>
+                            </div> 
+                        </div>   
+                        <div class="box-add-score-main-subject">
+                            <div class="score-get-id-subject-box">
+                                <label for="score-id-subject" class="score-id-subject-label">Mã môn học : </label>
+                                <input autocomplete="off" type="text" class="box-add-score-main-id-subject" id="score-id-subject">
+                            </div>
+                            <div class="score-name-subject-box">
+                                <label class="score-name-subject-label">Tên môn học : </label>
+                                <div class="score-name-subject"></div>
+                            </div> 
+                        </div>  
+                        <div class="input-score-1">
+                            <label for="score-1" class="score-1-label">Điểm miệng : </label>
+                            <input autocomplete="off" type="number" min="0" max="10" step="0.05" id="score-1">
+                        </div>
+                        <div class="input-score-2">
+                            <label for="score-2" class="score-2-label">Điểm 15 phút : </label>
+                            <input autocomplete="off" type="number" min="0" max="10" step="0.05" id="score-2">
+                        </div>
+                        <div class="input-score-3">
+                            <label for="score-3" class="score-3-label">Điểm giữa kì : </label>
+                            <input autocomplete="off" type="number" min="0" max="10" step="0.05" id="score-3">
+                        </div>
+                        <div class="input-score-4">
+                            <label for="score-4" class="score-4-label">Điểm cuối kì : </label>
+                            <input autocomplete="off" type="number" min="0" max="10" step="0.05" id="score-4">
+                        </div>
+                        <div class="main-score-button-option">
+                            <button class="save-score-button">
+                                <img src="https://static-00.iconduck.com/assets.00/save-icon-512x512-552twxqx.png" class="save-score-img">
+                                <p class="save-score-text">Lưu</p>
+                            </button>
+                            <button class="update-score-button">
+                                <img src="https://static-00.iconduck.com/assets.00/save-icon-512x512-552twxqx.png" class="update-score-img">
+                                <p class="update-score-text">Lưu</p>
+                            </button>
+                            <button class="close-score-button">
+                                <img src="https://logowik.com/content/uploads/images/close1437.jpg" class="close-score-img">
+                                <p class="close-score-text">Đóng</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-score-information-box">
+                <div class="main-score-information-table">
+                    <table>
+                        <colgroup>
+                            <col class="id-student-score">
+                            <col class="name-student-score">
+                            <col class="name-subject-score">
+                            <col class="score-score">
+                            <col class="option-score">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Mã sinh viên</th>
+                                <th>Tên sinh viên</th>
+                                <th>Tên môn học</th>
+                                <th>Điểm trung bình</th>
+                                <th title="Chỉnh sửa - Xóa">Tùy chọn</th>
+                        </thead>
+                        <tbody id="scoreTableBody">
+
+                        </tbody>
+        </div>
+    </div>
+    <script src=".\home.js"></script>
+</body>
+</html>
